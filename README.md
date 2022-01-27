@@ -19,11 +19,11 @@ This module accept the next parameters:
 
 By default, if the parameters are not provided, the next configuration is used:
 
-* Signaling server: https://77.231.202.135:11794
-* TURN server: turn:77.231.202.135:3478
+* Signaling server: https://signaling.helios.ari-imet.eu:11794
+* TURN server: turn:helios.ari-imet.eu:3478
 * TURN user: user1
 * TURN credential: (See value in values/string.xml)
-* STUN server: stun:77.231.202.135:3478
+* STUN server: stun:helios.ari-imet.eu:3478
 * Room Name: test_room
 
 All these values can be modified in the `values/strings.xml` file.
@@ -107,7 +107,7 @@ automation for deploy, versioning and distribution of the project.
 
 Similar to other dependencies available in Maven Central, Google or others
 repositories. In this case we specify the Nexus repository provided by Atos:
-`https://builder.helios-social.eu/repository/helios-repository/`
+`https://registry.helios.ari-imet.eu/repository/helios-repository/`
 
 This URL makes the project dependencies available.
 
@@ -121,7 +121,7 @@ variables in this way:
 repositories {
         ...
         maven {
-            url "https://builder.helios-social.eu/repository/helios-repository/"
+            url "https://registry.helios.ari-imet.eu/repository/helios-repository/"
             credentials {
                 username = heliosUser
                 password = heliosPassword
@@ -139,7 +139,7 @@ heliosPassword=password
 ```
 
 To request Nexus username and password, contact with:
-`jordi.hernandezv@atos.net`
+`francesco.dandria@atos.net`
 
 ### How to deploy a new version of the dependencies
 
@@ -163,7 +163,7 @@ to protect the `master` branch push and merge for the partner in charge of its
 module/project (maintainer).
 
 To request Jenkins username and password, contact with:
-`jordi.hernandezv@atos.net`
+`francesco.dandria@atos.net`
 
 ### How to use the dependencies
 
